@@ -1,0 +1,22 @@
+plot(density(control, edge=T, diggle=T), main="Controls with/without Edge Correction")
+
+plot(bw.ppl(control, srange=c(20,2000), ns=30), xlim=c(0,2000))
+plot(density(control, sigma=120))
+
+plot(bw.diggle(control, hmax=600), xlim=c(0,600)) # Choose this
+plot(density(control, sigma=bw.diggle))
+
+bw.scott(control) 
+plot(density(control, sigma=bw.scott))
+
+plot(bw.ppl(case, srange=c(20,2000), ns=30), xlim=c(0,2000))
+plot(density(case, sigma=80))
+
+plot(bw.diggle(case, hmax=600), xlim=c(0,600)) # Choose this
+plot(density(case, sigma=bw.diggle))
+
+bw.scott(case) 
+plot(density(case, sigma=bw.scott))
+
+plot(density(control, sigma=110))
+plot(density(case, sigma=70))

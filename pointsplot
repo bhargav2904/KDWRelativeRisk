@@ -1,0 +1,12 @@
+summary(PBC)
+plot(PBC)
+plot(split(PBC))
+
+case <- subset(PBC, marks=="case")
+control <- subset(PBC, marks=="control")
+
+plot(density(case), main = "761 Cases")
+plot(case, add=T)
+
+plot(density(control), main = "3020 Controls")
+plot(control, add=T)

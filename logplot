@@ -1,0 +1,1 @@
+plot(logrr(PBC, case=1, sigma=1000, sigmacon=1500))

@@ -1,0 +1,5 @@
+riskmap <- logrr(PBC, case=1, level=0.99,alternative = "greater", sigma=500, sigmacon=700, nsim=999)
+plot(riskmap, main="White areas are insignificant")
+plot(PBC, lwd=2, add=T)
+plot(PBC$window, lwd=2, add=T)
+logrr.test(riskmap)
